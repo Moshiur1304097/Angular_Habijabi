@@ -56,6 +56,32 @@ import { Component, OnInit } from '@angular/core';
              <input [(ngModel)]="name2" type="text">
 
              {{ name2 }}
+
+
+           
+
+
+             <div *ngIf="displayName2; then thenBlock; else elseBlock"></div>
+
+             <ng-template #thenBlock>
+             <h2> IF Block</h2>
+             </ng-template>
+
+             <ng-template #elseBlock>
+             <h2> Else Block</h2>
+             </ng-template>
+
+             <div [ngSwitch] ="color">
+               <div *ngSwitchCase="'red'">You picked red color</div> 
+               <div *ngSwitchCase="'blue'">You picked blue color</div> 
+               <div *ngSwitchCase="'green'">You picked green color</div> 
+               <div *ngSwitchCase="'orange'">You picked orange   color</div> 
+               <div *ngSwitchDefault> Pick again</div> 
+
+               <div *ngFor="let color of colors; index as i">
+                  <h2>Index {{ i }} Color {{ color }} </h2>
+               </div>
+
         `,
   // styleUrls: ['./test.component.scss']
 
@@ -107,6 +133,20 @@ export class TestComponent implements OnInit {
   }
 
   public name2="";
+  //displayName =true;
+
+  //ngIf Statement
+  // <h2 *ngIf="displayName; else elseBlock">Codevolution</h2>
+
+  //            <ng-template #elseBlock>
+  //             <h2>Name is hidden</h2>
+  //            </ng-template>
+
+  displayName2 =false;
+
+  public color = 'orange'; 
+
+  public colors =["red","orange","blue","white","green"];
 
 
 }
