@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -82,6 +82,10 @@ import { Component, OnInit } from '@angular/core';
                   <h2>Index {{ i }} Color {{ color }} </h2>
                </div>
 
+               <h2>{{ "Hello " + parentData}}</h2>
+
+               <button (click) = "fireEvent()"> Send Event </button>
+
         `,
   // styleUrls: ['./test.component.scss']
 
@@ -147,6 +151,14 @@ export class TestComponent implements OnInit {
   public color = 'orange'; 
 
   public colors =["red","orange","blue","white","green"];
+
+  @Input() public parentData;
+
+  @Output() public childEvent = new EventEmitter();
+
+  fireEvent(){
+    this.childEvent.emit('Hey Moshiur!');
+  }
 
 
 }
