@@ -1,12 +1,37 @@
 <p>test works!</p>
 
             <h2>{{ 2+2 }} </h2>
-  
-            <div>
-              Hello {{ name }}!
-            </div>
 
-            <h2> {{ "Welcome to " +  name1 }}</h2>
+       <!--Pipe Start-->
+           <div> 
+                <div>
+                Hello {{ name | lowercase }}!
+                </div>
+                <div>
+                Hello {{ name | uppercase }}!
+                </div>
+
+                <h2> {{ "Welcome to " +  name1 }}</h2>
+                <h2> {{  name1 | slice:3:5 }}</h2>
+                <h2>{{ person | json}}</h2>
+
+                <h2>{{ 6545.6548 | number:'1.2-3' }}</h2>
+                <h2>{{ 45.48 | number:'3.4-5' }}</h2>
+                <h2>{{ 5.6548 | number:'3.1-2' }}</h2>
+                <h2>{{ .25 | percent }}</h2>
+
+                <h2>{{ .25 | currency: 'BDT ' }}</h2>
+                <h2>{{ date }}</h2>
+                <h2>{{ date |date:'short' }}</h2>
+                <h2>{{ date | date:'long' }}</h2>
+                <h2>{{ date | date: 'shortDate'}}</h2>
+                <h2>{{ date  | date:'shortTime'}}</h2>
+                
+            </div>
+        <!--Pipe end-->
+
+
+            <h2> {{ message1 | titlecase }}</h2>
 
             <h2> {{ name.length }}</h2>
             <h2> {{ name1.length }}</h2>
@@ -15,6 +40,7 @@
             <h2> {{ name.toLowerCase() }}</h2>
           
             <h2> {{ greetUser() }}</h2>
+           
             <h2> {{ greetUser().length }}</h2>
 
             <h2> {{ siteUrl }}</h2>
@@ -52,10 +78,6 @@
              <input [(ngModel)]="name2" type="text">
 
              {{ name2 }}
-
-
-           
-
 
              <div *ngIf="displayName2; then thenBlock; else elseBlock"></div>
 

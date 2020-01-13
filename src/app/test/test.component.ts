@@ -6,87 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   // template: `
   //           <h2>{{ 2+2 }} </h2>
   
-  //           <div>
-  //             Hello {{ name }}!
-  //           </div>
-
-  //           <h2> {{ "Welcome to " +  name1 }}</h2>
-
-  //           <h2> {{ name.length }}</h2>
-  //           <h2> {{ name1.length }}</h2>
-
-  //           <h2> {{ name.toUpperCase() }}</h2>
-  //           <h2> {{ name.toLowerCase() }}</h2>
-          
-  //           <h2> {{ greetUser() }}</h2>
-  //           <h2> {{ greetUser().length }}</h2>
-
-  //           <h2> {{ siteUrl }}</h2>
-
-  //           <input type="text" value="Moshiur">
-  //           <br><br>
-
-  //           <input [id]="myId" type='text' value="Moshiur">
-  //           &nbsp; 
-  //           <input [disabled]="isDisabled" id="{{myId}}" type="text" value="Moshiur">
-  //           &nbsp;
-  //           <br><br>
-  //           <input bind-disabled="isDisabled" id="{{myId}}" type="text" value="Moshiur">
-
-  //           <h2 class="text-success">Codevolution</h2>
-  //           <h2 class="text-danger">Moshiur</h2>
-            
-           
-  //           <h2 [class]="successClass">Codevolution</h2>
-
-  //           <h2 class="text-success">Codevolution</h2>
-
-  //           <h2 class="text-special" [class] ="successClass">Codevolution</h2>
-
-  //           <h2 [class.text-danger]="hasError">Codevolution</h2>
-
-  //           <h2 [ngClass]="messageClasses">Codevolution</h2>
-
-  //           <h2 [style.color]="hasError ? 'red': 'green'">Style Binding</h2>
-            
-  //            <button (click)="onClick($event)">Greet</button>
-
-  //            {{ greeting }}
-
-  //            <input [(ngModel)]="name2" type="text">
-
-  //            {{ name2 }}
-
-
-           
-
-
-  //            <div *ngIf="displayName2; then thenBlock; else elseBlock"></div>
-
-  //            <ng-template #thenBlock>
-  //            <h2> IF Block</h2>
-  //            </ng-template>
-
-  //            <ng-template #elseBlock>
-  //            <h2> Else Block</h2>
-  //            </ng-template>
-
-  //            <div [ngSwitch] ="color">
-  //              <div *ngSwitchCase="'red'">You picked red color</div> 
-  //              <div *ngSwitchCase="'blue'">You picked blue color</div> 
-  //              <div *ngSwitchCase="'green'">You picked green color</div> 
-  //              <div *ngSwitchCase="'orange'">You picked orange   color</div> 
-  //              <div *ngSwitchDefault> Pick again</div> 
-
-  //              <div *ngFor="let color of colors; index as i">
-  //                 <h2>Index {{ i }} Color {{ color }} </h2>
-  //              </div>
-
-  //              <h2>{{ "Hello " + parentData}}</h2>
-
-  //              <button (click) = "fireEvent()"> Send Event </button>
-
-  //       `,
+    
   // styleUrls: ['./test.component.scss']
 
           styles: [`
@@ -159,6 +79,17 @@ export class TestComponent implements OnInit {
   fireEvent(){
     this.childEvent.emit('Hey Moshiur!');
   }
+
+  public message1='Welcome to Codevolution';
+
+  public person = {
+    "fName" : "John",
+    "lName" : "Doe"
+
+  };
+
+  public date =new Date();
+
 
 
 }
