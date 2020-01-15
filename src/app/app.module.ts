@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './employee.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -20,7 +21,9 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
