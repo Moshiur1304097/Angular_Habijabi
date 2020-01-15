@@ -11,10 +11,17 @@
     <!-- <div app-test></div> -->
 
     <app-test (childEvent)  = "message=$event" [parentData]= "name"></app-test>
-</div>
+
 
 <h2>{{ message }}</h2>
 
+    <div style="display: inline;">
+        <employee-list></employee-list>
+    </div>
 
+    <employee-detail></employee-detail>
+
+
+</div>
 
 <router-outlet></router-outlet>
